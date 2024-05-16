@@ -4,14 +4,14 @@
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
-import connectToDB from "../database/connectDB.js";
-import router from "../api_routes/index.js";
+import connectToDB from "./database/connectDB.js";
+import router from "./api_routes/index.js";
 import cookieParser from "cookie-parser";
 
    import path from "path";
    const __dirname = path.resolve();
 // for socket
-import {app, server} from "../socket/index.js"
+import {app, server} from "./socket/index.js"
 
 const PORT = 3001;
 // const app = express();
