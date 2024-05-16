@@ -10,7 +10,6 @@
     "client-install": "cd client && npm install",
     "client-build": "cd client && npm run build",
     "server": "node server/index.js",
-    "build": "npm run client-build",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
