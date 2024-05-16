@@ -13,7 +13,7 @@ import cookieParser from "cookie-parser";
 // for socket
 import {app, server} from "./socket/index.js"
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 // const app = express();
 
 app.use(
@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
-server.listen(PORT || process.env.PORT, () => {
+server.listen(PORT , () => {
   console.log("Server run on port " + PORT);
   connectToDB();
 });
